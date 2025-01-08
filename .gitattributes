@@ -1,2 +1,4 @@
+fonts/PingFang.ttc filter=lfs diff=lfs merge=lfs -text
+video/Nancyvideo.mp4 filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 *.ttc filter=lfs diff=lfs merge=lfs -text
