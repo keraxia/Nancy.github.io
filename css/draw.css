@@ -1,0 +1,170 @@
+.containertxm {
+    width:70%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper {
+    width: 15%;
+    margin: 0px;
+    perspective: 2000px;
+}
+
+.front-image,
+.back-image {
+    width: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.front-image {
+    z-index: 2;
+    position: relative;
+    display: block;
+}
+
+.back-image {
+    transform: rotateX(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.image-wrapper:hover .front-image {
+    transform: rotateX(180deg);
+}
+
+.image-wrapper:hover .back-image {
+    transform: rotateX(0deg);
+}
+
+.containertxm {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#drawtitle {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(to right, #b45309, #78350f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top:80px;
+}
+
+.curve-containertxm {
+    position: relative;
+    height: 100px;
+    margin-bottom: 2rem;
+}
+
+.curvetxm {
+    width: 100%;
+    height: 100%;
+}
+
+.contenttxm {
+    display: grid;
+    gap: 2rem;
+}
+
+.text-blocktxm {
+    background-color: rgba(154, 120, 91, 0.8);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.text-blocktxm h2 {
+    color: white;
+    margin-top: 0;
+
+}
+
+.text-blocktxm p {
+    color: #fff8e1;
+}
+
+.image-gridtxm {
+    display: grid;
+    gap: 1rem;
+}
+
+.flip-containertxm {
+    perspective: 1000px;
+    height: 250px;
+    width:400px;
+}
+
+.flippertxm {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-containertxm:hover .flippertxm {
+    transform: rotateY(180deg);
+}
+
+.fronttxm,
+.backtxm {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.backtxm {
+    transform: rotateY(180deg);
+}
+
+.coffeetxm-color {
+    background-color: #6E5648;
+}
+
+.flippertxm img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.center-div{
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .image-gridtxm {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .text-block.longtxm {
+        grid-column: span 2;
+    }
+}
+
+@keyframes drawCurve {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}

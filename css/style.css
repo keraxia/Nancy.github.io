@@ -1,0 +1,233 @@
+/* 定义名为zoom的动画关键帧 */
+@keyframes zoom {
+    from {
+        /* 初始状态，图片保持原始大小 */
+        transform: scale(1.0);
+    }
+    to {
+        /* 结束状态，图片放大到1.2倍（你可以根据需求调整这个倍数） */
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(-10px); /* 可根据实际调整向上移动的距离 */
+        opacity: 0.8;
+    }
+    60% {
+        transform: translateY(-5px); /* 调整下落过程中向上的位移量 */
+        opacity: 0.9;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* 初始状态，图片完全透明，不可见 */
+    }
+    100% {
+        opacity: 1; /* 结束状态，图片完全不透明，完全显示出来 */
+    }
+}
+
+/* 整体内容区域宽度设置及水平居中 */
+#main-content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#main-content {
+    animation: fadeIn 3s ease; /* 应用名为fadeIn的动画，动画持续时间为1秒，缓动函数为ease，让渐入过程更自然 */
+}
+
+
+#section4 {
+  margin-bottom: 90px;
+}
+
+#section5 {
+  margin-top: 30px;
+  margin-bottom: 160px;
+  font-family: 'Open Sans', Arial, sans-serif; /* 优先使用Open Sans字体，若加载失败则回退到Arial和sans-serif */
+  font-size: 14px;
+ }
+
+#section5 h4,
+#section5 p {
+    transition: all 0.3s ease; /* 添加过渡效果，让动画启动和结束更平滑，这里设置过渡时间为0.3秒，可按需调整 */
+    font-family:'siyuanhei';
+    font-size:14px;
+}
+#section5 h4:hover,
+#section5 p:hover {
+    animation: bounce 1s ease; /* 鼠标悬浮时应用名为bounce的动画，持续时间1秒，缓动函数为ease */
+}
+
+/* 二级标题样式 */
+h1 {
+  text-align: center;
+  margin-bottom: 55px;
+  font-family: 'zhengwen';
+}
+
+/* 二级标题样式 */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'zhengwen';
+}
+
+/* 三级标题样式 */
+h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* 段落样式 */
+p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  max-width: 100%; /* 统一段落文本最大宽度，使其在一定范围内换行排版 */
+  box-sizing: border-box; /* 确保宽度计算包含内边距和边框 */
+  font-family:'zhengwen';
+  font-size:18px;
+}
+
+
+/* 用于包裹三栏用法组合的容器样式 */
+
+.usage-triple {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: #EDEDED;
+	padding: 20px 25px 0px 25px; 
+	margin-top: 20px;
+	margin-bottom: 35px;
+}
+
+.usage-triple img {
+    transition: transform 0.3s ease; /* 添加过渡效果，让动画更平滑，0.3s是过渡时间，ease表示过渡的时间函数 */
+}
+.usage-triple img:hover {
+    /* 当鼠标悬停在图片上时，应用之前定义的zoom动画 */
+    animation: zoom 0.3s ease;
+}
+
+/* 每个单独用法的容器样式，设置宽度等使其内部元素合理展示 */
+.usage-item1 {
+  width: 32%; /* 微调宽度占比，使三栏布局更协调 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.usage-item1 img {
+  max-width: 100%; /* 图片在 usage-item1 内最大占满容器，但同时受限于 usage-item1 的宽度 */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+
+
+/* 用于包裹文字与图片组合的容器样式 */
+.text-img-pair {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between; /* 可以调整这个值来改变文字和图片之间的间距占比，影响整体宽度 */
+  box-sizing: border-box; /* 统一盒模型 */
+}
+
+/* 左边文字样式 */
+.left-text {
+  width: 48%; /* 微调宽度占比 */
+  padding-right: 15px;
+}
+
+/* 右边图片样式 */
+.right-img {
+  width: 48%;
+}
+
+
+/* 左边图片样式 */
+.left-img {
+  width: 48%;
+}
+
+
+/* 右边文字样式 */
+.right-text {
+  width: 48%;
+  padding-left: 15px;
+}
+
+
+/* 用于包裹每一组两列的用法组合的容器样式 */
+.usage-pairs {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /* 统一盒模型计算方式 */
+}
+
+/* 每一组两列的用法组合的样式，使用flex布局实现两列并排 */
+.usage-pair {
+  display: flex;
+  justify-content: space-around; /* 调整间距分配方式，可根据实际效果更换值 */
+  margin-bottom: 10px;
+  box-sizing: border-box; /* 统一盒模型 */
+}
+
+/* 每个单独用法的容器样式，设置宽度等使其内部元素合理展示 */
+.usage-item2 {
+  width: 42%; /* 微调宽度占比 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    background-color: #EDEDED;
+	padding: 15px 25px 0px 25px;
+	margin-bottom: 10px;
+}
+
+.usage-item2 img {
+  max-width: 100%;
+  height: auto;
+margin-bottom: 35px;
+}
+
+
+
+.usage-item2:hover{
+    transition: transform 0.3s ease; /* 添加过渡效果，让动画更平滑，0.3s是过渡时间，ease表示过渡的时间函数 */
+}
+.usage-item2:hover {
+    /* 当鼠标悬停在图片上时，应用之前定义的zoom动画 */
+    animation: zoom 0.3s ease;
+}
+
+@font-face{
+  font-family: 'zhengwen';
+  src: url('../fonts/zhengwen.otf')
+}
+
+@font-face {
+  font-family: 'noto';
+  src: url('../fonts/NotoSerifSC-VariableFont_wght.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'cormo';
+  src: url('../fonts/CormorantInfant-Light.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'siyuanhei';
+  src: url('../fonts/NotoSansCJK-Light-3.otf') format('truetype')
+}

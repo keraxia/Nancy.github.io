@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/icon.png">
+    <title>「咖」香Nancy，「渣」实生活</title>
+    <link rel=stylesheet href="./css/body.css">
+    <!-- 引入 Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- 引入 WOW.js -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <style>
+        h1 {
+            background: #956134;
+            /* 设置背景颜色 */
+            padding: 10px;
+            /* 添加内边距 */
+            font-weight: bold;
+            /* 加粗文本 */
+            display: inline-block;
+            /* 使其宽度适应内容 */
+            color: white;
+            /* 设置文本颜色 */
+            margin-top: 20px;
+            /* 设置上外边距 */
+            width: 100%;
+            position: relative;
+            /* 为内部伪元素定位做准备 */
+            box-sizing: border-box;
+            /* 确保内边距等不会撑大元素宽度 */
+            text-align: center;
+            /* 让文字在水平方向居中显示 */
+            -webkit-backface-visibility: hidden;
+            /* 解决webkit内核浏览器可能出现的闪烁问题 */
+            backface-visibility: hidden;
+        }
+
+        h1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            /* 继承h1的背景颜色 */
+            z-index: -1;
+            /* 让伪元素在文字下方，作为背景框 */
+            transform-origin: center;
+            /* 设定变换原点在中心 */
+            -webkit-transform-origin: center;
+            /* 兼容webkit内核浏览器 */
+            will-change: transform;
+            /* 优化浏览器渲染性能，提前告知要变换 */
+            transition: transform 1s cubic-bezier(0.42, 0, 0.58, 1);
+            /* 针对变换设置过渡效果 */
+            -webkit-transition: transform 1s cubic-bezier(0.42, 0, 0.58, 1);
+            /* 兼容webkit内核浏览器 */
+        }
+
+        h1:hover::before {
+            transform: scaleX(1.2);
+            /* 鼠标悬停时，在水平方向放大1.2倍，模拟背景框从中间往两边扩展 */
+            -webkit-transform: scaleX(1.2);
+            /* 兼容webkit内核浏览器 */
+        }
+    </style>
+
+    <style>
+        h2 {
+            background: #956134;
+            /* 设置背景颜色 */
+            padding: 10px;
+            /* 添加内边距 */
+            font-weight: bold;
+            /* 加粗文本 */
+            display: inline-block;
+            /* 使其宽度适应内容 */
+            color: white;
+            /* 设置文本颜色 */
+            margin-top: 20px;
+            /* 设置上外边距 */
+            width: 100%;
+            position: relative;
+            /* 为内部伪元素定位做准备 */
+            box-sizing: border-box;
+            /* 确保内边距等不会撑大元素宽度 */
+            text-align: center;
+            /* 让文字在水平方向居中显示 */
+            -webkit-backface-visibility: hidden;
+            /* 解决webkit内核浏览器可能出现的闪烁问题 */
+            backface-visibility: hidden;
+        }
+
+        h2::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            /* 继承h1的背景颜色 */
+            z-index: -1;
+            /* 让伪元素在文字下方，作为背景框 */
+            transform-origin: center;
+            /* 设定变换原点在中心 */
+            -webkit-transform-origin: center;
+            /* 兼容webkit内核浏览器 */
+            will-change: transform;
+            /* 优化浏览器渲染性能，提前告知要变换 */
+            transition: transform 1s cubic-bezier(0.42, 0, 0.58, 1);
+            /* 针对变换设置过渡效果 */
+            -webkit-transition: transform 1s cubic-bezier(0.42, 0, 0.58, 1);
+            /* 兼容webkit内核浏览器 */
+        }
+
+        h2:hover::before {
+            transform: scaleX(1.2);
+            /* 鼠标悬停时，在水平方向放大1.2倍，模拟背景框从中间往两边扩展 */
+            -webkit-transform: scaleX(1.2);
+            /* 兼容webkit内核浏览器 */
+        }
+    </style>
+
+    <style>
+        .blank-div {
+            height: 50px;
+            /* 可以按需调整空白高度值 */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div id="nav-conbox">
+            <div class="conli">
+                <a href="./index.html" class="nav-link" data-short-text="咖啡渣☕️+环保♻️">
+                    <span>南阳路咖啡渣环保效益计算</span>
+                </a>
+            </div>
+            <div class="conli">
+                <a href="./draw.html" class="nav-link" data-short-text="咖啡渣☕️+艺术🎨">
+                    <span>南阳路咖啡渣沙画创作实践</span>
+                </a>
+            </div>
+            <div class="conli">
+                <a href="./usage.html" class="nav-link" data-short-text="咖啡渣☕️并不渣🌍">
+                    <span>咖啡渣如何实现再循环利用</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 废：原章节导航栏 -->
+        <!-- <div id="nav-more">
+            <div class="icon-container">
+                <img id="icon" src="./images/navmore.png" alt="导航图标" style="cursor: pointer;" width="40%">
+                <div id="dropdown">
+                    <ul id="moreli">
+                        <li><a href="#section1">南京西路简介</a></li>
+                        <li><a href="#section2">南阳路漫步地图</a></li>
+                        <li><a href="#section3">咖啡渣产量数据</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+
+        <div id="nav-imgbox">
+            <img src="./images/navbar.png" height=50px>
+        </div>
+    </nav>
+
+    <div id="main-content">
+        <div class="part">
+            <div class="blank-div"></div>
+            <h1>咖啡渣环保知识专栏：解锁咖啡渣的再利用奥秘</h1>
+            <p align="center"><img class="top-img" title="图源：新浪网" width="100%" height="auto"
+                    src="./usimage/grounds.jpg"></p>
+            <p>随着咖啡市场的蓬勃扩张，咖啡渣的处理问题也日益凸显，成为了一个不容忽视的挑战。若未经妥善处理，随意填埋或焚烧，不仅可能导致咖啡渣中的咖啡因、单宁酸及多酚等有益成分转化为潜在的环境污染物，更枉费了咖啡渣本身所蕴含的多种可能性及其潜在的经济价值。因此，从源头着手，科学合理地处置并利用这些咖啡渣，不仅是对环境保护的一份贡献，也是推动咖啡产业向绿色、可持续方向发展的有力举措。
+            </p>
+
+            <div id="section1">
+                <div class="blank-div"></div>
+                <h2>未尽潜能：湿垃圾处理的重新思考</h2>
+                <p>在上海，大多数咖啡店会将每日产生的咖啡渣作为湿垃圾分类，然后由环卫部门统一回收。然而，咖啡渣在作为湿垃圾回收处理的过程中，面临着一系列挑战。这主要是由于其独特的成分结构，需要采取特定的回收处理工艺来妥善处理。
+                </p>
+                <p>目前，上海对于湿垃圾的处理方式多样，涵盖了焚烧、厌氧产沼、好氧堆肥等多种方法。其中，厌氧产沼与好氧堆肥作为资源化利用的主要手段，承载着湿垃圾循环利用的重要使命。</p>
+                <p>然而，在实际操作中，咖啡渣在厌氧产沼过程中因高碳氮比而快速水解，容易产生过多的挥发性脂肪酸。这不仅可能影响发酵系统的稳定性，还可能降低甲烷的产量，从而影响沼气的经济效益。</p>
+                <p>在好氧堆肥方面，咖啡渣与其他原料的有机质含量、堆体结构等存在差异，对工艺参数的精准控制提出了更高的要求。若处理不当，堆肥品质将大打折扣，甚至可能对土壤造成不良影响。</p>
+                <p>因此，对于咖啡渣这类具有特殊性质的湿垃圾，需要针对其特性进行深入研究，积极探索并发展更为契合的回收利用新路径，以实现其资源化的最大化利用。</p>
+                <p align="center"><img title="图源：觅知网" width="100%" height="auto" src="./usimage/rubbish.jpg"></p>
+            </div>
+            <div id="section2">
+                <div class="blank-div"></div>
+                <h2>绿色再生：资源化利用的多元领域</h2>
+                <p>随着社会对资源循环利用与环境保护意识的日益提升，咖啡渣这一废弃物正逐渐展现出其在多个领域的广泛利用价值。</p>
+                <div class="usage-triple">
+                    <div class="usage-item1">
+                        <p>在纺织行业，台湾Singtex公司利用咖啡渣研发出独特的咖啡纱布料，与Puma等百余家知名服装品牌携手，共同推出多款环保服饰。</p>
+                        <img src="./usimage/yarn.png" alt="咖啡纱布料相关图片" title="图源：Singtex" width="100%" height="auto">
+                    </div>
+                    <div class="usage-item1">
+                        <p>在日化领域，丹麦生物技术公司Kaffe Bueno致力于将咖啡渣升级为化妆品、营养品及食品原料等，与多个品牌建立了原料合作关系。</p>
+                        <img src="./usimage/hairoil.png" alt="日化产品相关图片" title="图源：Kaffe Bueno" width="100%"
+                            height="auto">
+                    </div>
+                    <div class="usage-item1">
+                        <p>在生物燃料方面，英国科技企业Bio-bean将废弃咖啡渣里蕴含的油脂提炼出来，进而加工成生物柴油，为伦敦巴士提供了绿色动力。</p>
+                        <img src="./usimage/biobean.jpg" alt="生物柴油相关图片" title="图源：Bio-bean" width="100%" height="auto">
+                    </div>
+                </div>
+                <div class="text-img-pair">
+                    <div class="left-text">
+                        <p>此外，将咖啡渣作为产品材料进行再利用，也是当前资源化利用的一大亮点。通过将其融入高分子基材中，可以制成咖啡渣复合材料，用于生产各种环保产品。科思创聚合物公司将回收后的咖啡渣与其他环保材料混合，制成低碳环保的“咖啡渣纤维板材料”，可以用于多种家具设计。这类产品不仅具有良好的生物降解性，更彰显了企业的环保理念。
+                        </p>
+                    </div>
+                    <img class="right-img" title="图源：澎湃新闻" width="45%" height="auto" src="./usimage/material.jpeg"
+                        alt="咖啡渣纤维板材料相关图片">
+                </div>
+                <div class="text-img-pair">
+                    <img class="left-img" title="图源：Eco-Greenergy" width="45%" height="auto"
+                        src="./usimage/compaign.png" alt="咖啡渣回收运动相关图片">
+                    <div class="right-text">
+                        <p>同时，咖啡渣作为有机肥料的应用也备受瞩目。其富含的氮、磷、钾等营养成分，能有效促进蔬菜生长，降低作物病害风险。在香港，环保社企Eco-Greenergy绿行侠自2015年开展全城咖啡渣回收运动，回收的咖啡渣中，少量被捐赠给研究团队或用于品牌周边制作，而大部分被用于农业相关用途，如菌菇种植和堆肥处理。目前，该团队已回收了196.2吨咖啡渣，捐赠了145.9吨堆肥。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="section3">
+                <div class="blank-div"></div>
+                <h2>妙趣横生：与日常相伴的创意运用</h2>
+                <p>除了上述需要经过复杂加工的制品之外，咖啡渣还能在我们的日常生活中找到新的用途，成为实用的生活用品。这些多样化的再利用方法不仅简单易行，而且创意十足，不仅能有效减轻咖啡渣对环境造成的负担，还能让我们在日常中享受到将废物转化为宝的绿色生活乐趣。接下来，让我们一起探索几种咖啡渣在日常生活中的巧妙运用吧。
+                </p>
+                <div class="usage-pairs">
+                    <div class="usage-pair">
+                        <div class="usage-item2">
+                            <h3>除味除臭能手</h3>
+                            <p>将干燥的咖啡渣装入布袋，封口后置于鞋柜、冰箱等需要除味的地方，能自然吸附并有效消除异味，为我们的生活空间带来清新。</p>
+                            <img src="./usimage/sachet.jpg" alt="除味相关图片" title="图源：pexels" width="100%" height="auto">
+                        </div>
+                        <div class="usage-item2">
+                            <h3>环保灭烟神器</h3>
+                            <p>将咖啡渣放入烟灰缸中，它就能成为一款环保而高效的灭烟工具。相比液体灭烟剂，咖啡渣能够更加有效地吸收烟味，让室内空气重归纯净。</p>
+                            <img src="./usimage/smoke.jpg" alt="灭烟相关图片" title="图源：pexels" width="100%" height="auto">
+                        </div>
+                    </div>
+                    <div class="usage-pair">
+                        <div class="usage-item2">
+                            <h3>创意手工香皂</h3>
+                            <p>将咖啡渣与皂基混合加热熔化，再加入适量的精油增添香气，然后倒入模具中冷却凝固，脱模后即可得到一款独具匠心的咖啡渣香皂，既实用又美观。</p>
+                            <img src="./usimage/soap.jpeg" alt="手工香皂相关图片" title="图源：pexels" width="100%" height="auto">
+                        </div>
+                        <div class="usage-item2">
+                            <h3>自制身体磨砂膏</h3>
+                            <p>将细腻的咖啡渣与椰子油、沐浴霜混合，搅拌均匀后装入容器中，一款天然的身体磨砂膏就诞生了，不仅能去除皮肤角质，还能带来独特的咖啡香氛。</p>
+                            <img src="./usimage/scrub.jpg" alt="身体磨砂膏相关图片" title="图源：pexels" width="100%" height="auto">
+                        </div>
+                    </div>
+                    <div class="usage-pair">
+                        <div class="usage-item2">
+                            <h3>植物营养源泉</h3>
+                            <p>咖啡渣中富含氨、磷、钾等微量元素，是植物生长的理想养分。将咖啡渣用作植物肥料，既环保又经济，为家中的绿植增添一份滋养。</p>
+                            <img src="./usimage/fertile.jpg" alt="植物肥料相关图片" title="图源：pexels" width="100%"
+                                height="auto">
+                        </div>
+                        <div class="usage-item2">
+                            <h3>家庭清洁魔法</h3>
+                            <p>咖啡渣呈现弱酸性，配合钢丝球、海绵擦等进行刷洗，即可去除灶台、炒锅等表面的油渍，是一种纯天然的厨房清洁剂。</p>
+                            <img src="./usimage/clean.jpeg" alt="植物肥料相关图片" title="图源：pexels" width="100%" height="auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section4">
+                <div class="blank-div"></div>
+                <h2>结语</h2>
+                <p>咖啡渣虽小，却蕴藏着不小的再利用潜力。通过探索和实践多样化的咖啡渣再利用途径，我们不仅可以减少对环境的负担，还能为咖啡产业的绿色发展注入新的活力。让我们携手努力，共同解锁咖啡渣的再利用奥秘，为环保事业添砖加瓦，贡献出我们的一份力量！
+                </p>
+            </div>
+            <div id="section5">
+                <h4>【参考资料】</h4>
+                <p>[1] Zhao,N.,Liu,Z.,Yu,T.,&Yan,F.(2023).Spent coffee grounds: Present and future of environmentally
+                    friendly applications on industries-A review.Trends in Food Science & Technology, 143, 104312.
+                    https://doi.org/10.1016/j.tifs.2023.104312</p>
+                <p>[2] 李倩.有机废弃物的能源回收与肥分富集技术研究[D].西安建筑科技大学,2014.</p>
+                <p>[3] 路昌.咖啡渣高温好氧堆肥工艺优化及所堆肥特异应用研究[D].烟台大学,2020.DOI:10.27437/d.cnki.gytdu.2020.000134.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <footer class="my-element1 wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s"
+        data-wow-delay="0.5s">
+        <div class="footer-infos">
+            <div class="footer-info" id="footer-info1">
+                <h4>项目支持</h4>
+                <p>上海城市空间艺术季联创实验室<br>复旦大学新闻学院</p>
+                <h4>联系我们</h4>
+                <p>karexia@163.com</p>
+            </div>
+            <div class="footer-info" id="footer-info2">
+                <h4>特别鸣谢</h4>
+                <p>南阳路所有咖啡店店长及员工<br>
+                    <span id="coffeeshop">BLUEKINGCOFFEE蓝京烘焙咖啡<br>
+                        PL by plusone咖啡 · Yolo Sense Coffee · Oaks 19<br>
+                        CERCLE CAFÉ · OMA COFFEE · HAFcoffee<br>
+                        IUK cafe · Marmalade · Manner Coffee</span>
+                </p>
+            </div>
+            <div class="footer-info" id="footer-info3">
+                <h4>小组成员</h4>
+                <p id="stuname1">夏昊扬<br>张心怡<br>李林杰<br>宋语阳<br>唐小茗</p>
+                <p id="stuname2">夏昊扬&nbsp&nbsp&nbsp&nbsp&nbsp张心怡&nbsp&nbsp&nbsp&nbsp&nbsp李林杰
+                    <br>宋语阳&nbsp&nbsp&nbsp&nbsp&nbsp唐小茗
+                </p>
+            </div>
+        </div>
+        <p style="text-align: center;">&copy 复旦大学·新闻学院·2024</p>
+    </footer>
+    </div>
+
+    <div id="left-nav">
+        <div class="nav-icon" id="nav-icon1">
+            <a href="#section1">
+                <div class="leftnav-img">
+                    <img src="./images/icon4.png" width="70%">
+                </div>
+            </a>
+            <div class="leftnav-text"><span>咖啡渣的回收现状</span></div>
+        </div>
+        <div class="nav-icon" id="nav-icon1">
+            <a href="#section2">
+                <div class="leftnav-img">
+                    <img src="./images/icon5.png" width="60%">
+                </div>
+            </a>
+            <div class="leftnav-text"><span>咖啡渣的多元用途</span></div>
+        </div>
+        <div class="nav-icon" id="nav-icon1">
+            <a href="#section3">
+                <div class="leftnav-img">
+                    <img src="./images/icon6.png" width="60%">
+                </div>
+            </a>
+            <div class="leftnav-text"><span>咖啡渣的日常妙用</span></div>
+        </div>
+    </div>
+
+    <!-- 废：原章节导航栏 -->
+    <!-- <script>
+        const icon = document.getElementById('icon');
+        const dropdown = document.getElementById('dropdown');
+
+        icon.addEventListener('click', (e) => {
+            e.stopPropagation(); // 阻止事件冒泡
+            if (dropdown.style.maxHeight === '0px' || dropdown.style.maxHeight === '') {
+                dropdown.style.maxHeight = dropdown.scrollHeight + 'px'; // 设置为内容的高度
+            } else {
+                dropdown.style.maxHeight = '0'; // 收起
+            }
+        });
+
+        document.addEventListener('click', () => {
+            dropdown.style.maxHeight = '0'; // 点击页面任意位置时，菜单回收
+        });
+
+    </script> -->
+
+    <script>
+        new WOW().init();
+    </script>
+
+
+    <script>
+        document.querySelectorAll('.nav-icon').forEach(icon => {
+            icon.addEventListener('mouseenter', function () {
+                const text = this.querySelector('.leftnav-text');
+                text.style.left = '45px';
+
+                text.style.opacity = '1';
+            });
+
+            icon.addEventListener('mouseleave', function () {
+                const text = this.querySelector('.leftnav-text');
+                text.style.left = '-10px';
+                text.style.opacity = '0';
+            });
+        });
+    </script>
+
+</body>
+
+
+</html>
