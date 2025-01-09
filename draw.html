@@ -8,6 +8,15 @@
     <link rel=stylesheet href="./css/draw.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <meta http-equiv="Content-Security-Policy" content="frame-src https://player.bilibili.com; ">
+    <style>
+        iframe {
+             width: 1200px; /* 根据实际需求调整宽度，确保合适大小 */
+             height:600px;
+             margin: 0 auto; /* 让该元素在其父元素中水平居中，可根据页面布局需求选择是否添加 */
+             overflow: visible; /* 防止内容被意外裁剪，保证iframe内容完整显示 */
+         }
+     </style>
 </head>
 
 
@@ -66,13 +75,16 @@
                     咖啡渣沙画工作坊，邀请店内顾客和街道行人利用咖啡渣创造出一种新的艺术形态，将咖啡渣变成充满创意的沙画作品，用艺术让咖啡渣的生命延续，创造和咖啡渣的专属回忆。</p>
             </div>
 
-            <div class="center-div">
+            <!-- <div class="center-div">
                 <video controls poster="./video/Videocover.jpg" style="width: 1180px;">
                     <source src="./video/Nancyvideo.mp4" type="video/mp4">
                     <source src="./video/Nancyvideo2.mp4" type="video/mp4">
                     <source src="./video/Nancyvideo-mov.mov" type="video/mov">
                     Your browser does not support the video tag.
                 </video>
+            </div> -->
+            <div class="center-div">
+                <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=113796064479497&bvid=BV1N3rqYxEFK&cid=27772258756&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
             </div>
         
             <div class="image-gridtxm" id="section2-draw">
